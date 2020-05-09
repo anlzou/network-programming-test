@@ -2,7 +2,7 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-09 18:55:26
+ * @LastEditTime: 2020-05-09 19:32:58
  * @FilePath    : \tcp-socket\README.md
  * @Describe    : 
  -->
@@ -18,9 +18,19 @@ tcpServer.cpp
 
 #3 如果编译出现 <code>undefined reference to `__imp_xxx'</code> 则需要使用CMD手动编译，添加 <code>-lwsock32</code> 参数。
 
+# 客户端
+tcpClient.cpp
+
+## 注意问题
+#4 注意事项和服务端一样。
 
 ## 运行
 #3 进入src/目录下，使用CMD编译
 ```
 g++ tcpServer.cpp -lwsock32
+```
+
+#4 进入src/目录下，使用CMD编译，如果 <code>tcpServer.cpp</code> 已经编译生成 <code>a.exe</code> 需要先把a.exe命名为其它名称，否则被覆盖。
+```
+g++ tcpClient.cpp -lwsock32
 ```
