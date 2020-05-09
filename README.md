@@ -2,7 +2,7 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-09 19:32:58
+ * @LastEditTime: 2020-05-09 22:10:01
  * @FilePath    : \tcp-socket\README.md
  * @Describe    : 
  -->
@@ -34,3 +34,14 @@ g++ tcpServer.cpp -lwsock32
 ```
 g++ tcpClient.cpp -lwsock32
 ```
+
+# 更新日志
+>## V1.0.0
+>>### release-v1
+### 2020年5月9日
+- 服务端和客户端连接成功，不可以相互通信。
+
+>## V2.0.0
+>>### release-v2
+### 2020年5月9日
+- 服务端和客户端单行通信。[教程地址](http://e-learning.51cto.com/video/82847)
