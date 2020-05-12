@@ -21,7 +21,7 @@ int main() {                        //主函数开始
     SOCKET sockSer;  //定义连接套接字和数据收发套接字句柄
     sockSer = socket(AF_INET, SOCK_STREAM, 0);  //创建TCP套接字
 
-    sockaddr_in addrSer, addrCli;  //定义套接字地址结构，服务端；客户端
+    SOCKADDR_IN addrSer, addrCli;  //定义套接字地址结构，服务端；客户端
     addrSer.sin_family =
         AF_INET;  //初始化地址结构；AF_INET:家族协议，默认2，internetwork：UDP，TCP
     addrSer.sin_port = htons(75);               //监听端口

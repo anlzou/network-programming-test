@@ -1,9 +1,9 @@
 /***
- * @Date        : 2020-05-10 12:17:54
+ * @Date        : 2020-05-12 22:11:03
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-10 15:20:54
- * @FilePath    : \tcp-socket\src\tcpClient.cpp
+ * @LastEditTime: 2020-05-12 22:29:28
+ * @FilePath    : \tcp-socket\src\tcp\tcpClient.cpp
  * @Describe    :
  */
 
@@ -23,7 +23,7 @@ int main() {
     char sztext[10] = {0};
     sockCli = socket(AF_INET, SOCK_STREAM, 0);  //创建TCP套接字
 
-    sockaddr_in addrSer;           //定义套接字地址结构
+    SOCKADDR_IN addrSer;           //定义套接字地址结构
     addrSer.sin_family = AF_INET;  //初始化地址结构
     addrSer.sin_port = htons(75);
     addrSer.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");

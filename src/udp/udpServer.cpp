@@ -2,14 +2,6 @@
  * @Date        : 2020-05-12 09:34:53
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-12 18:46:56
- * @FilePath    : \tcp-socket\src\udp\udpServer.cpp
- * @Describe    :
- */
-/***
- * @Date        : 2020-05-12 09:34:53
- * @LastEditors : anlzou
- * @Github      : https://github.com/anlzou
  * @LastEditTime: 2020-05-12 09:36:20
  * @FilePath    : \tcp-socket\src\udp\updServer.cpp
  * @Describe    :

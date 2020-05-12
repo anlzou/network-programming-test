@@ -2,29 +2,30 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-12 18:59:19
+ * @LastEditTime: 2020-05-12 23:13:29
  * @FilePath    : \tcp-socket\README.md
  * @Describe    : 
  -->
-# tcp-socket
+# socket
 
-# 服务端
+# TCP
+## 服务端
 tcpServer.cpp
 
-## 注意问题
+### 注意问题
 #1 <code>#include <winsock2.h></code> 要在 <code>#include <windows.h></code> 前面，否则编译不通过。
 
 #2 代码中使用中文，编译后运行出现乱码，未解决。[解决方法一：未成功](https://blog.csdn.net/ME__WE/article/details/86478291?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.nonecase)
 
 #3 如果编译出现 <code>undefined reference to `__imp_xxx'</code> 则需要使用CMD手动编译，添加 <code>-lwsock32</code> 参数。
 
-# 客户端
+## 客户端
 tcpClient.cpp
 
-## 注意问题
+### 注意问题
 #4 注意事项和服务端一样。
 
-## 运行
+### 运行
 #3 进入src/目录下，使用CMD编译
 ```
 g++ tcpServer.cpp -lwsock32
@@ -35,6 +36,18 @@ g++ tcpServer.cpp -lwsock32
 g++ tcpClient.cpp -lwsock32
 ```
 
-# udp-socket
-# test
-- upd/
+------
+
+# UDP
+## 服务端
+#1 课本 
+
+Server：[udpServer_p20.cpp](src/udp/udpServer_p20.cpp)
+
+Client：[udpClient_p21.cpp](src/udp/udpClient_p21.cpp)
+
+#2 [Socket 网络基本编程视频课程](http://e-learning.51cto.com/course/4951)
+
+Server：[udpServer.cpp](src/udp/udpServer.cpp)
+
+Client：[udpClient.cpp](src/udp/udpClient.cpp)
