@@ -2,12 +2,20 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
+<<<<<<< HEAD
  * @LastEditTime: 2020-05-10 15:28:06
+=======
+ * @LastEditTime: 2020-05-12 23:13:29
+>>>>>>> develop
  * @FilePath    : \tcp-socket\README.md
  * @Describe    : 
  -->
-# tcp-socket
+# socket
 
+<<<<<<< HEAD
+=======
+# TCP
+>>>>>>> develop
 ## 服务端
 tcpServer.cpp
 
@@ -24,7 +32,7 @@ tcpClient.cpp
 ### 注意问题
 #4 注意事项和服务端一样。
 
-## 运行
+### 运行
 #3 进入src/目录下，使用CMD编译
 ```
 g++ tcpServer.cpp -lwsock32 -o Server.exe
@@ -32,6 +40,7 @@ g++ tcpServer.cpp -lwsock32 -o Server.exe
 
 #4 进入src/目录下，使用CMD编译
 ```
+<<<<<<< HEAD
 g++ tcpClient.cpp -lwsock32 -o Client.exe
 ```
 
@@ -48,3 +57,23 @@ g++ tcpClient.cpp -lwsock32 -o Client.exe
 
 #### 2020年5月10日
 - 补充编译参数
+=======
+g++ tcpClient.cpp -lwsock32
+```
+
+------
+
+# UDP
+## 服务端
+#1 课本 
+
+Server：[udpServer_p20.cpp](src/udp/udpServer_p20.cpp)
+
+Client：[udpClient_p21.cpp](src/udp/udpClient_p21.cpp)
+
+#2 [Socket 网络基本编程视频课程](http://e-learning.51cto.com/course/4951)
+
+Server：[udpServer.cpp](src/udp/udpServer.cpp)
+
+Client：[udpClient.cpp](src/udp/udpClient.cpp)
+>>>>>>> develop
