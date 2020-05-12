@@ -2,20 +2,15 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
-<<<<<<< HEAD
- * @LastEditTime: 2020-05-10 15:28:06
-=======
+ * @LastEditTime: 2020-05-13 07:47:18
  * @LastEditTime: 2020-05-12 23:13:29
->>>>>>> develop
  * @FilePath    : \tcp-socket\README.md
  * @Describe    : 
  -->
 # socket
 
-<<<<<<< HEAD
-=======
 # TCP
->>>>>>> develop
+
 ## 服务端
 tcpServer.cpp
 
@@ -40,7 +35,7 @@ g++ tcpServer.cpp -lwsock32 -o Server.exe
 
 #4 进入src/目录下，使用CMD编译
 ```
-<<<<<<< HEAD
+
 g++ tcpClient.cpp -lwsock32 -o Client.exe
 ```
 
@@ -57,7 +52,7 @@ g++ tcpClient.cpp -lwsock32 -o Client.exe
 
 #### 2020年5月10日
 - 补充编译参数
-=======
+```
 g++ tcpClient.cpp -lwsock32
 ```
 
@@ -76,4 +71,3 @@ Client：[udpClient_p21.cpp](src/udp/udpClient_p21.cpp)
 Server：[udpServer.cpp](src/udp/udpServer.cpp)
 
 Client：[udpClient.cpp](src/udp/udpClient.cpp)
->>>>>>> develop
