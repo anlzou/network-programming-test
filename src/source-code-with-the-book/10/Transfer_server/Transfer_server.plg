@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Transfer_server - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPAD0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Transfer_server.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\01-VC\Transfer_server\Transfer_serverDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPAD0.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPAD1.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Transfer_server.pdb" /debug /machine:I386 /out:"Debug/Transfer_server.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\Transfer_server.obj"
+".\Debug\Transfer_serverDlg.obj"
+".\Debug\Transfer_server.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPAD1.tmp"
+<h3>Output Window</h3>
+Compiling...
+Transfer_serverDlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Transfer_server.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
