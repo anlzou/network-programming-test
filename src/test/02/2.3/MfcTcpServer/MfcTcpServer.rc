@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (P.R.C.) resources
+// Chinese (中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 #ifdef _WIN32
@@ -50,7 +50,7 @@ BEGIN
     "LANGUAGE 4, 2\r\n"
     "#pragma code_page(936)\r\n"
     "#endif //_WIN32\r\n"
-    "#include ""res\\TCP客户端程序.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""res\\MfcTcpServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
     "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
     "#endif\r\n"
     "\0"
@@ -66,41 +66,23 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TCP客户端程序.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MfcTcpServer.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 TCP客户端程序"
-FONT 9, "宋体"
-BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
-    LTEXT           "TCP客户端程序 1.0 版",IDC_STATIC,40,10,119,8,
-                    SS_NOPREFIX
-    LTEXT           "版权所有 (C) 2012",IDC_STATIC,40,25,119,8
-    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
-END
-
-IDD_TCP_DIALOG DIALOGEX 0, 0, 202, 189
+IDD_MFCTCPSERVER_DIALOG DIALOGEX 0, 0, 293, 200
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "TCP客户端程序"
+CAPTION "TcpServer"
 FONT 9, "宋体"
 BEGIN
-    EDITTEXT        IDC_ADDR,79,20,105,16,ES_AUTOHSCROLL
-    EDITTEXT        IDC_PORT,79,47,41,16,ES_AUTOHSCROLL
-    LTEXT           "服务器地址",IDC_STATIC,19,22,45,14
-    LTEXT           "端      口",IDC_STATIC,19,47,45,14
-    PUSHBUTTON      "连  接",IDC_CONNECT,139,47,45,16
-    LTEXT           "信息显示：",IDC_STATIC,19,72,45,14
-    EDITTEXT        IDC_TEXT,18,85,166,64,ES_MULTILINE | ES_AUTOHSCROLL | 
-                    WS_DISABLED | WS_VSCROLL
-    EDITTEXT        IDC_SENDTEXT,19,155,111,14,ES_AUTOHSCROLL | WS_DISABLED
-    PUSHBUTTON      "发  送",IDC_SEND,139,154,45,16,WS_DISABLED
+    PUSHBUTTON      "发     送",IDC_SEND,89,173,95,14
+    EDITTEXT        IDC_TEXT,23,32,246,87,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SENDTEXT,26,136,247,20,ES_AUTOHSCROLL
+    LTEXT           "",IDC_ADDR,23,13,138,11
 END
 
 
@@ -128,13 +110,13 @@ BEGIN
         BLOCK "080404B0"
         BEGIN
             VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "TCP客户端程序 Microsoft 基础类应用程序\0"
+            VALUE "FileDescription", "MfcTcpServer Microsoft 基础类应用程序\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "TCP客户端程序\0"
-            VALUE "LegalCopyright", "版权所有 (C) 2012\0"
+            VALUE "InternalName", "MfcTcpServer\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2020\0"
             VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "TCP客户端程序.EXE\0"
-            VALUE "ProductName", "TCP客户端程序 应用程序\0"
+            VALUE "OriginalFilename", "MfcTcpServer.EXE\0"
+            VALUE "ProductName", "MfcTcpServer 应用程序\0"
             VALUE "ProductVersion", "1, 0, 0, 1\0"
         END
     END
@@ -155,37 +137,17 @@ END
 #ifdef APSTUDIO_INVOKED
 GUIDELINES DESIGNINFO DISCARDABLE 
 BEGIN
-    IDD_ABOUTBOX, DIALOG
+    IDD_MFCTCPSERVER_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 228
+        RIGHTMARGIN, 286
         TOPMARGIN, 7
-        BOTTOMMARGIN, 48
-    END
-
-    IDD_TCP_DIALOG, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 195
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 182
+        BOTTOMMARGIN, 193
     END
 END
 #endif    // APSTUDIO_INVOKED
 
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// String Table
-//
-
-STRINGTABLE DISCARDABLE 
-BEGIN
-    IDS_ABOUTBOX            "关于 TCP客户端程序(&A)..."
-    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
-END
-
-#endif    // Chinese (P.R.C.) resources
+#endif    // Chinese (中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -205,7 +167,7 @@ END
 LANGUAGE 4, 2
 #pragma code_page(936)
 #endif //_WIN32
-#include "res\TCP客户端程序.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res\MfcTcpServer.rc2"  // non-Microsoft Visual C++ edited resources
 #include "l.chs\afxres.rc"          // Standard components
 #endif
 

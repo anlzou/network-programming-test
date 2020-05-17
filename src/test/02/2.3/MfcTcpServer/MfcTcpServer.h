@@ -1,9 +1,8 @@
-//Download by www.cctry.com
-// TCP客户端程序.h : main header file for the TCP客户端程序 application
+// MfcTcpServer.h : main header file for the MFCTCPSERVER application
 //
 
-#if !defined(AFX_TCP_H__79645CB7_D87A_41F8_A61C_D2CBCC383100__INCLUDED_)
-#define AFX_TCP_H__79645CB7_D87A_41F8_A61C_D2CBCC383100__INCLUDED_
+#if !defined(AFX_MFCTCPSERVER_H__07DE4AF4_0E50_424B_B7B8_341003A89586__INCLUDED_)
+#define AFX_MFCTCPSERVER_H__07DE4AF4_0E50_424B_B7B8_341003A89586__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
@@ -16,25 +15,25 @@
 #include "resource.h"		// main symbols
 
 /////////////////////////////////////////////////////////////////////////////
-// CTCPApp:
-// See TCP客户端程序.cpp for the implementation of this class
+// CMfcTcpServerApp:
+// See MfcTcpServer.cpp for the implementation of this class
 //
 
-class CTCPApp : public CWinApp
+class CMfcTcpServerApp : public CWinApp
 {
 public:
-	CTCPApp();
+	CMfcTcpServerApp();
 
 // Overrides
 	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CTCPApp)
+	//{{AFX_VIRTUAL(CMfcTcpServerApp)
 	public:
 	virtual BOOL InitInstance();
 	//}}AFX_VIRTUAL
 
 // Implementation
 
-	//{{AFX_MSG(CTCPApp)
+	//{{AFX_MSG(CMfcTcpServerApp)
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
 	//}}AFX_MSG
@@ -47,4 +46,4 @@ public:
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_TCP_H__79645CB7_D87A_41F8_A61C_D2CBCC383100__INCLUDED_)
+#endif // !defined(AFX_MFCTCPSERVER_H__07DE4AF4_0E50_424B_B7B8_341003A89586__INCLUDED_)

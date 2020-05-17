@@ -1,10 +1,9 @@
-//Download by www.cctry.com
-// TCP服务器程序Dlg.cpp : implementation file
+// MfcTcpServerDlg.cpp : implementation file
 //
 
 #include "stdafx.h"
-#include "TCP服务器程序.h"
-#include "TCP服务器程序Dlg.h"
+#include "MfcTcpServer.h"
+#include "MfcTcpServerDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -12,9 +11,7 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-/////////////////////////////////////////////////////////////////////////////
-// CAboutDlg dialog used for App About
-
+//anlzou add
 class CAboutDlg : public CDialog
 {
 public:
@@ -44,22 +41,43 @@ CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
 	//}}AFX_DATA_INIT
 }
 
-void CAboutDlg::DoDataExchange(CDataExchange* pDX)
+
+
+//anlzou end.
+
+/////////////////////////////////////////////////////////////////////////////
+// CMfcTcpServerDlg dialog
+
+CMfcTcpServerDlg::CMfcTcpServerDlg(CWnd* pParent /*=NULL*/)
+	: CDialog(CMfcTcpServerDlg::IDD, pParent)
+{
+	//{{AFX_DATA_INIT(CMfcTcpServerDlg)
+		// NOTE: the ClassWizard will add member initialization here
+	//}}AFX_DATA_INIT
+	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
+	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+}
+
+void CMfcTcpServerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CAboutDlg)
+	//{{AFX_DATA_MAP(CMfcTcpServerDlg)
+		// NOTE: the ClassWizard will add DDX and DDV calls here
 	//}}AFX_DATA_MAP
 }
 
-BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
-	//{{AFX_MSG_MAP(CAboutDlg)
-		// No message handlers
+BEGIN_MESSAGE_MAP(CMfcTcpServerDlg, CDialog)
+	//{{AFX_MSG_MAP(CMfcTcpServerDlg)
+	ON_WM_SYSCOMMAND()
+	ON_WM_PAINT()
+	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_SEND, OnSend)
+	ON_MESSAGE(WM_SOCKET,OnSocket)
 END_MESSAGE_MAP()
 
-/////////////////////////////////////////////////////////////////////////////
-// CTCPDlg dialog
 
+//anlzou add
 CTCPDlg::CTCPDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CTCPDlg::IDD, pParent)
 {
@@ -89,16 +107,18 @@ BEGIN_MESSAGE_MAP(CTCPDlg, CDialog)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
-/////////////////////////////////////////////////////////////////////////////
-// CTCPDlg message handlers
 
-BOOL CTCPDlg::OnInitDialog()
+
+//anlzou add end.
+
+/////////////////////////////////////////////////////////////////////////////
+// CMfcTcpServerDlg message handlers
+
+BOOL CMfcTcpServerDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// Add "About..." menu item to system menu.
-
-	// IDM_ABOUTBOX must be in the system command range.
+	//anlzou add
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -114,12 +134,17 @@ BOOL CTCPDlg::OnInitDialog()
 		}
 	}
 
+
+
+	//anlzou add end.
+
 	// Set the icon for this dialog.  The framework does this automatically
 	//  when the application's main window is not a dialog
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
 	// TODO: Add extra initialization here
+	//anlzou add
 	addr.sin_family=AF_INET;
 	addr.sin_port=htons(80);
 	addr.sin_addr.S_un.S_addr=INADDR_ANY;
@@ -129,10 +154,13 @@ BOOL CTCPDlg::OnInitDialog()
 	::WSAAsyncSelect(s,this->m_hWnd,WM_SOCKET,FD_ACCEPT|FD_READ);
 	GetDlgItem(IDC_TEXT)->EnableWindow(false);
 	GetDlgItem(IDC_ADDR)->SetWindowText("服务器监听已经启动！");
-
+	
+	//anlzou add end.
+	
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
+//anlzou add
 void CTCPDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
@@ -146,11 +174,14 @@ void CTCPDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
+
+//anlzou add end.
+
 // If you add a minimize button to your dialog, you will need the code below
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CTCPDlg::OnPaint() 
+void CMfcTcpServerDlg::OnPaint() 
 {
 	if (IsIconic())
 	{
@@ -177,11 +208,13 @@ void CTCPDlg::OnPaint()
 
 // The system calls this to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CTCPDlg::OnQueryDragIcon()
+HCURSOR CMfcTcpServerDlg::OnQueryDragIcon()
 {
 	return (HCURSOR) m_hIcon;
 }
 
+
+//anlzou add
 void CTCPDlg::OnSocket(WPARAM wParam,LPARAM lParam)
 {
 	CString str13;
@@ -238,3 +271,5 @@ void CTCPDlg::OnSend()
 		}
 	}
 }
+
+//anlzou add end.
