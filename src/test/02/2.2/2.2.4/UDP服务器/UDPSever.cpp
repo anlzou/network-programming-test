@@ -10,6 +10,7 @@ int main()
 	WORD w=MAKEWORD(2,0);							//定义套接字版本
 	char sztext[]="欢迎你\r\n";						//定义欢迎信息
 	::WSAStartup(w,&data);							//初始化套接字库
+
 	SOCKET s;										//定义套接字句柄
 	s=::socket(AF_INET, SOCK_DGRAM,0);				//创建UDP套接字
 	sockaddr_in addr,addr2;							//套接字地址结构变量
@@ -31,6 +32,7 @@ int main()
 			break;
 		} 
 	}
+
 	::closesocket(s);							//关闭套接字对象
 	::WSACleanup();								//释放套接字库
 	if(getchar())							//如果有输入，则关闭程序

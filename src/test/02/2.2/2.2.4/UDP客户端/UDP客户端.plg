@@ -6,28 +6,19 @@
 --------------------Configuration: UDP客户端 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP92F.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPDD4F.tmp" with contents
 [
-/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/UDP客户端.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
-"D:\01-VC\源代码\UDP客户端\UDPClient.cpp"
-]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP92F.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP930.tmp" with contents
-[
-kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/UDP客户端.pdb" /debug /machine:I386 /out:"Debug/UDP客户端.exe" /pdbtype:sept 
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/UDP客户端.pdb" /debug /machine:I386 /out:"Debug/UDP客户端.exe" /pdbtype:sept 
 ".\Debug\UDPClient.obj"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP930.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPDD4F.tmp"
 <h3>Output Window</h3>
-Compiling...
-UDPClient.cpp
-D:\01-VC\源代码\UDP客户端\UDPClient.cpp(36) : warning C4715: 'main' : not all control paths return a value
 Linking...
 
 
 
 <h3>Results</h3>
-UDP客户端.exe - 0 error(s), 1 warning(s)
+UDP客户端.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
