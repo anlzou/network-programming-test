@@ -2,14 +2,14 @@
  * @Date        : 2020-05-09 18:29:49
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
- * @LastEditTime: 2020-05-16 17:55:08
+ * @LastEditTime: 2020-05-17 15:23:04
  * @LastEditTime: 2020-05-12 23:13:29
  * @FilePath    : \socket\README.md
  * @Describe    : 
  -->
 # 网络编程
 
-## TCP
+## tcp/
 
 ### 服务端
 [tcpServer.cpp](./src/tcp/tcpServer.cpp)
@@ -39,7 +39,7 @@ g++ tcpClient.cpp -lwsock32 -o Client.exe
 
 ------
 
-## UDP
+## udp/
 #1 课本 
 
 - Server：[udpServer_p20.cpp](src/udp/udpServer_p20.cpp)
@@ -53,10 +53,29 @@ g++ tcpClient.cpp -lwsock32 -o Client.exe
 - Client：[udpClient.cpp](src/udp/udpClient.cpp)
 
 ------
-## FTP
+## ftp/
 coding...
 
 ------
+## test/
+- 对课本实例进行编写测试
+
+【环境】vc++6.0
+
+------
+## restructure-by-vs2019/
+- 对课本实例进行重构
+
+【环境】vs2019
+
+------
+## restructure-by-python3/
+计划在...
+- 对课本实例进行重构
+
+【环境】python3
+
+-------
 ## 更新日志
 
 
@@ -69,4 +88,9 @@ coding...
 
 #### 2020年5月16日
 - 修改项目框架
-- 添加书本源码
+- 添加书本源码 source-code-with-book/
+
+#### 2020年5月17日
+- 添加文件夹
+  - test/ 在vc++6.0 环境下调试
+  - restructure-by-vs2019/ 在vs2019环境下重构
