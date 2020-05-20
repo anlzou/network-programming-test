@@ -1,24 +1,24 @@
-# Microsoft Developer Studio Project File - Name="MfcTcpServer" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="TCP客户端程序" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** DO NOT EDIT **
 
 # TARGTYPE "Win32 (x86) Application" 0x0101
 
-CFG=MfcTcpServer - Win32 Debug
+CFG=TCP客户端程序 - Win32 Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
-!MESSAGE NMAKE /f "MfcTcpServer.mak".
+!MESSAGE NMAKE /f "TCP客户端程序.mak".
 !MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "MfcTcpServer.mak" CFG="MfcTcpServer - Win32 Debug"
+!MESSAGE NMAKE /f "TCP客户端程序.mak" CFG="TCP客户端程序 - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "MfcTcpServer - Win32 Release" (based on "Win32 (x86) Application")
-!MESSAGE "MfcTcpServer - Win32 Debug" (based on "Win32 (x86) Application")
+!MESSAGE "TCP客户端程序 - Win32 Release" (based on "Win32 (x86) Application")
+!MESSAGE "TCP客户端程序 - Win32 Debug" (based on "Win32 (x86) Application")
 !MESSAGE 
 
 # Begin Project
@@ -29,7 +29,7 @@ CPP=cl.exe
 MTL=midl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "MfcTcpServer - Win32 Release"
+!IF  "$(CFG)" == "TCP客户端程序 - Win32 Release"
 
 # PROP BASE Use_MFC 6
 # PROP BASE Use_Debug_Libraries 0
@@ -54,7 +54,7 @@ LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /machine:I386
 # ADD LINK32 /nologo /subsystem:windows /machine:I386
 
-!ELSEIF  "$(CFG)" == "MfcTcpServer - Win32 Debug"
+!ELSEIF  "$(CFG)" == "TCP客户端程序 - Win32 Debug"
 
 # PROP BASE Use_MFC 6
 # PROP BASE Use_Debug_Libraries 1
@@ -83,40 +83,32 @@ LINK32=link.exe
 
 # Begin Target
 
-# Name "MfcTcpServer - Win32 Release"
-# Name "MfcTcpServer - Win32 Debug"
+# Name "TCP客户端程序 - Win32 Release"
+# Name "TCP客户端程序 - Win32 Debug"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE=.\MfcTcpServer.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=.\MfcTcpServer.rc
-# End Source File
-# Begin Source File
-
-SOURCE=.\MfcTcpServerDlg.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=.\StdAfx.cpp
 # ADD CPP /Yc"stdafx.h"
+# End Source File
+# Begin Source File
+
+SOURCE=".\TCP客户端程序.cpp"
+# End Source File
+# Begin Source File
+
+SOURCE=".\TCP客户端程序.rc"
+# End Source File
+# Begin Source File
+
+SOURCE=".\TCP客户端程序Dlg.cpp"
 # End Source File
 # End Group
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
-# Begin Source File
-
-SOURCE=.\MfcTcpServer.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\MfcTcpServerDlg.h
-# End Source File
 # Begin Source File
 
 SOURCE=.\Resource.h
@@ -125,17 +117,25 @@ SOURCE=.\Resource.h
 
 SOURCE=.\StdAfx.h
 # End Source File
+# Begin Source File
+
+SOURCE=".\TCP客户端程序.h"
+# End Source File
+# Begin Source File
+
+SOURCE=".\TCP客户端程序Dlg.h"
+# End Source File
 # End Group
 # Begin Group "Resource Files"
 
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
-SOURCE=.\res\MfcTcpServer.ico
+SOURCE=".\res\TCP客户端程序.ico"
 # End Source File
 # Begin Source File
 
-SOURCE=.\res\MfcTcpServer.rc2
+SOURCE=".\res\TCP客户端程序.rc2"
 # End Source File
 # End Group
 # Begin Source File

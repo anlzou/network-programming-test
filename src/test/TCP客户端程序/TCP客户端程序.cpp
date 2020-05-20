@@ -1,9 +1,9 @@
-// MfcTcpServer.cpp : Defines the class behaviors for the application.
+// TCP客户端程序.cpp : Defines the class behaviors for the application.
 //
 
 #include "stdafx.h"
-#include "MfcTcpServer.h"
-#include "MfcTcpServerDlg.h"
+#include "TCP客户端程序.h"
+#include "TCP客户端程序Dlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -12,10 +12,10 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-// CMfcTcpServerApp
+// CTCPApp
 
-BEGIN_MESSAGE_MAP(CMfcTcpServerApp, CWinApp)
-	//{{AFX_MSG_MAP(CMfcTcpServerApp)
+BEGIN_MESSAGE_MAP(CTCPApp, CWinApp)
+	//{{AFX_MSG_MAP(CTCPApp)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG
@@ -23,25 +23,24 @@ BEGIN_MESSAGE_MAP(CMfcTcpServerApp, CWinApp)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CMfcTcpServerApp construction
+// CTCPApp construction
 
-CMfcTcpServerApp::CMfcTcpServerApp()
+CTCPApp::CTCPApp()
 {
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// The one and only CMfcTcpServerApp object
+// The one and only CTCPApp object
 
-CMfcTcpServerApp theApp;
+CTCPApp theApp;
 
 /////////////////////////////////////////////////////////////////////////////
-// CMfcTcpServerApp initialization
+// CTCPApp initialization
 
-BOOL CMfcTcpServerApp::InitInstance()
+BOOL CTCPApp::InitInstance()
 {
-	//anlzou add
 	if (!AfxSocketInit())
 	{
 		AfxMessageBox(IDP_SOCKETS_INIT_FAILED);
@@ -49,7 +48,6 @@ BOOL CMfcTcpServerApp::InitInstance()
 	}
 
 	AfxEnableControlContainer();
-	//anlzou end.
 
 	// Standard initialization
 	// If you are not using these features and wish to reduce the size
@@ -62,7 +60,7 @@ BOOL CMfcTcpServerApp::InitInstance()
 	Enable3dControlsStatic();	// Call this when linking to MFC statically
 #endif
 
-	CMfcTcpServerDlg dlg;
+	CTCPDlg dlg;
 	m_pMainWnd = &dlg;
 	int nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

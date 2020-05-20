@@ -1,46 +1,46 @@
 ========================================================================
-       MICROSOFT FOUNDATION CLASS LIBRARY : MfcTcpServer
+       MICROSOFT FOUNDATION CLASS LIBRARY : TCP客户端程序
 ========================================================================
 
 
-AppWizard has created this MfcTcpServer application for you.  This application
+AppWizard has created this TCP客户端程序 application for you.  This application
 not only demonstrates the basics of using the Microsoft Foundation classes
 but is also a starting point for writing your application.
 
 This file contains a summary of what you will find in each of the files that
-make up your MfcTcpServer application.
+make up your TCP客户端程序 application.
 
-MfcTcpServer.dsp
+TCP客户端程序.dsp
     This file (the project file) contains information at the project level and
     is used to build a single project or subproject. Other users can share the
     project (.dsp) file, but they should export the makefiles locally.
 
-MfcTcpServer.h
+TCP客户端程序.h
     This is the main header file for the application.  It includes other
     project specific headers (including Resource.h) and declares the
-    CMfcTcpServerApp application class.
+    CTCPApp application class.
 
-MfcTcpServer.cpp
+TCP客户端程序.cpp
     This is the main application source file that contains the application
-    class CMfcTcpServerApp.
+    class CTCPApp.
 
-MfcTcpServer.rc
+TCP客户端程序.rc
     This is a listing of all of the Microsoft Windows resources that the
     program uses.  It includes the icons, bitmaps, and cursors that are stored
     in the RES subdirectory.  This file can be directly edited in Microsoft
 	Visual C++.
 
-MfcTcpServer.clw
+TCP客户端程序.clw
     This file contains information used by ClassWizard to edit existing
     classes or add new classes.  ClassWizard also uses this file to store
     information needed to create and edit message maps and dialog data
     maps and to create prototype member functions.
 
-res\MfcTcpServer.ico
+res\TCP客户端程序.ico
     This is an icon file, which is used as the application's icon.  This
-    icon is included by the main resource file MfcTcpServer.rc.
+    icon is included by the main resource file TCP客户端程序.rc.
 
-res\MfcTcpServer.rc2
+res\TCP客户端程序.rc2
     This file contains resources that are not edited by Microsoft 
 	Visual C++.  You should place all resources not editable by
 	the resource editor in this file.
@@ -52,10 +52,10 @@ res\MfcTcpServer.rc2
 
 AppWizard creates one dialog class:
 
-MfcTcpServerDlg.h, MfcTcpServerDlg.cpp - the dialog
-    These files contain your CMfcTcpServerDlg class.  This class defines
+TCP客户端程序Dlg.h, TCP客户端程序Dlg.cpp - the dialog
+    These files contain your CTCPDlg class.  This class defines
     the behavior of your application's main dialog.  The dialog's
-    template is in MfcTcpServer.rc, which can be edited in Microsoft
+    template is in TCP客户端程序.rc, which can be edited in Microsoft
 	Visual C++.
 
 
@@ -64,7 +64,7 @@ Other standard files:
 
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
-    named MfcTcpServer.pch and a precompiled types file named StdAfx.obj.
+    named TCP客户端程序.pch and a precompiled types file named StdAfx.obj.
 
 Resource.h
     This is the standard header file, which defines new resource IDs.

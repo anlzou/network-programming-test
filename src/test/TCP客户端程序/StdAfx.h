@@ -3,8 +3,8 @@
 //      are changed infrequently
 //
 
-#if !defined(AFX_STDAFX_H__A84741C0_DB7A_4CCF_ABDD_879133D9C400__INCLUDED_)
-#define AFX_STDAFX_H__A84741C0_DB7A_4CCF_ABDD_879133D9C400__INCLUDED_
+#if !defined(AFX_STDAFX_H__EAB18C3D_9FEA_41BB_ABBF_B24155ACA22B__INCLUDED_)
+#define AFX_STDAFX_H__EAB18C3D_9FEA_41BB_ABBF_B24155ACA22B__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
@@ -20,8 +20,9 @@
 #include <afxcmn.h>			// MFC support for Windows Common Controls
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
+#include <afxsock.h>		// MFC socket extensions
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_STDAFX_H__A84741C0_DB7A_4CCF_ABDD_879133D9C400__INCLUDED_)
+#endif // !defined(AFX_STDAFX_H__EAB18C3D_9FEA_41BB_ABBF_B24155ACA22B__INCLUDED_)
