@@ -3,35 +3,38 @@
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
  * @LastEditTime: 2020-05-25 08:11:16
- * @FilePath    : \socket\src\test\03\test3_3\NamedPipe\¹ÜµÀ¿Í»§¶Ë.cpp
+ * @FilePath    : \socket\src\test\03\test3_3\NamedPipe\ï¿½Üµï¿½ï¿½Í»ï¿½ï¿½ï¿½.cpp
  * @Describe    :
  */
-#include <iostream>
-#include <windows.h>
-
-using namespace std;
+#include <windows.h>  //åŒ…å«å¤´æ–‡ä»¶
+#include <stdio.h>
 
 int main() {
     HANDLE hpip;
     OVERLAPPED ovi = {0};
-    char buf[] = "ÃüÃû¹ÜµÀ²âÊÔ³ÌĞò";
-    DWORD readbuf;
-    cout << "ÕıÔÚÁ¬½ÓÃüÃû¹ÜµÀ" << endl;
-
-    if (WaitNamedPipe("\\\\.\\pipe\\pipename", NMPWAIT_WAIT_FOREVER)) {
+    char buf[] = "å‘½åç®¡é“æµ‹è¯•ç¨‹åº123";  //å®šä¹‰æ•°æ®ç¼“å†²åŒº
+    DWORD readbuf;                       //å®šä¹‰ç»“æ„ä½“å˜é‡
+    printf("æ­£åœ¨è¿æ¥å‘½åç®¡é“ï¼\r\n");
+    if (WaitNamedPipe("\\\\.\\pipe\\pipename", NMPWAIT_WAIT_FOREVER))
+    //è¿æ¥å‘½åç®¡é“
+    {
+        //æ‰“å¼€æŒ‡å®šå‘½åç®¡é“
         hpip = CreateFile("\\\\.\\pipe\\pipename", GENERIC_READ | GENERIC_WRITE,
                           0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-        if (hpip == INVALID_HANDLE_VALUE) {
-            cout << "´ò¿ªÃüÃû¹ÜµÀÊ§°Ü" << endl;
+        if (hpip == INVALID_HANDLE_VALUE)  //æ‰“å¼€å‘½åç®¡é“å¤±è´¥
+        {
+            printf("æ‰“å¼€å‘½åç®¡é“å¤±è´¥\r\n");
         } else {
-            if (WriteFile(hpip, buf, sizeof(buf), &readbuf, NULL)) {
-                cout << "Êı¾İĞ´Èë³É¹¦" << endl;
+            if (WriteFile(hpip, buf, sizeof(buf), &readbuf,
+                          NULL))  //å†™å…¥æ•°æ®åˆ°ç®¡é“
+            {
+                printf("æ•°æ®å†™å…¥æˆåŠŸ\r\n");  //æç¤ºä¿¡æ¯
             } else {
-                cout << "Êı¾İĞ´ÈëÊ§°Ü" << endl;
+                printf("æ•°æ®å†™å…¥å¤±è´¥\r\n");
             }
         }
     } else {
-        cout << "Á¬½ÓÃüÁî¹ÜµÀÊ§°Ü" << endl;
+        printf("è¿æ¥å‘½åç®¡é“å¤±è´¥\r\n");  //æç¤ºä¿¡æ¯
     }
     return 0;
 }

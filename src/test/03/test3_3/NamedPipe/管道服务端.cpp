@@ -3,33 +3,33 @@
  * @LastEditors : anlzou
  * @Github      : https://github.com/anlzou
  * @LastEditTime: 2020-05-25 08:10:42
- * @FilePath    : \socket\src\test\03\test3_3\NamedPipe\¹ÜµÀ·şÎñ¶Ë.cpp
+ * @FilePath    :
+ * \socket\src\test\03\test3_3\NamedPipe\ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½??.cpp
  * @Describe    :
  */
-#include <iostream>
-#include <windows.h>
-
-using namespace std;
+#include <windows.h>  //åŒ…å«å¤´æ–‡ä»¶
+#include <stdio.h>
 
 int main() {
-    HANDLE hpip;
-    OVERLAPPED ovi = {0};
-    char buf[200];
-    DWORD readbuf;
-    hpip = CreateNamedPipe("\\\\.\\pip\\pipename", PIPE_ACCESS_DUPLEX,
-                           PIPE_TYPE_BYTE, PIPE_UNLIMITED_INSTANCES, 1024, 1024,
-                           0, NULL);
-    cout << "create sucess" << endl;
-
-    cout << "ÕıÔÚµÈ´ı¿Í»§¶ËµÄÁ¬½Ó¡£¡£¡£" << endl;
-    if (ConnectNamedPipe(hpip, &ovi)) {
-        cout << "¿Í»§¶ËÁ¬½Ó³É¹¦!!!!!" << endl;
-        cout << "ÕıÔÚ¶ÁÈ¡Êı¾İ" << endl;
-        if (ReadFile(hpip, buf, 200, &readbuf, NULL)) {
-            cout << "¶ÁÈ¡Êı¾İ³É¹¦£¡£¡£¡£¡£¡<<endl";
-            cout << "Êı¾İÎª£º" << buf << endl;
+    HANDLE hpip;           //å®šä¹‰å‘½åç®¡é“å¥æŸ„
+    OVERLAPPED ovi = {0};  //å®šä¹‰ç»“æ„ä½“å˜é‡
+    char buf[200];         //å®šä¹‰æ•°æ®ç¼“å†²åŒº
+    DWORD readbuf;         //è·å–å®é™…è¯»å–å­—èŠ‚æ•°
+    hpip =
+        CreateNamedPipe("\\\\.\\pipe\\pipename", PIPE_ACCESS_DUPLEX,
+                        PIPE_TYPE_BYTE, PIPE_UNLIMITED_INSTANCES, 1024, 1024, 0,
+                        NULL);  //åˆ›å»ºå‘½åç®¡é“
+    printf("åˆ›å»ºç®¡é“æˆåŠŸï¼Œæ­£åœ¨ç­‰å¾…å®¢æˆ·ç«¯è¿æ¥ï¼\r\n");
+    if (::ConnectNamedPipe(hpip, &ovi))  //ç­‰å¾…å®¢æˆ·ç«¯çš„è¿æ¥è¯·æ±‚
+    {
+        printf("å®¢æˆ·ç«¯è¿æ¥æˆåŠŸï¼\r\n");
+        printf("æ­£åœ¨è¯»å–æ•°æ®ï¼\r\n");                  //æç¤ºä¿¡æ¯
+        if (ReadFile(hpip, buf, 200, &readbuf, NULL))  //è¯»å–ç®¡é“æ•°æ®
+        {
+            printf("æ•°æ®è¯»å–æˆåŠŸ\r\n");  //æç¤ºä¿¡æ¯
+            printf("è¯»å–çš„æ•°æ®æ˜¯ï¼š%s\r\n", buf);
         } else {
-            cout << "¶ÁÈ¡Êı¾İÊ§°Ü£¡£¡£¡£¡£¡£¡£¡£¡";
+            printf("æ•°æ®è¯»å–å¤±è´¥\r\n");
         }
     }
     return 0;
