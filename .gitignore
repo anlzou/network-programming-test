@@ -12,3 +12,6 @@
 *.vcxproj.user
 UpgradeLog.htm
 *.sln
+
+# cmd、vs code编译
+*.exe
