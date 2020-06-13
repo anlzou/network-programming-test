@@ -16,3 +16,5 @@ UpgradeLog.htm
 # cmd、vs code编译
 *.exe
 *.plg
+
+*.ini
